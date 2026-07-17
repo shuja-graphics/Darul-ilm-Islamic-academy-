@@ -1,34 +1,180 @@
 # Darul-ilm-Islamic-academy-
-An islamic online academy 
-# Darul Ilm Academy - Responsive Landing Page
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Darul Ilm Academy | دارالعلوم اسلامک اکیڈمی</title>
+    <!-- Google Fonts for Urdu & English -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-A modern, highly responsive single-page website for **Darul Ilm Academy (دارالعلوم اسلامک اکیڈمی)**. This project adapts the premium green, gold, and glowing neon aesthetic of a modern academic portal to showcase Islamic courses, academy details, and easy admission paths.
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        <span>📢 علم دین سیکھنے کی عمر نہیں ہوتی اور نہ ہی کوئی عذر۔ آج ہی اس مبارک سفر کا حصہ بنیں!</span>
+    </div>
 
----
+    <!-- Navigation Header -->
+    <header class="main-header" dir="ltr">
+        <nav class="nav-menu">
+            <a href="#home">HOME</a>
+            <a href="#about">ABOUT US</a>
+            <a href="#courses">COURSES</a>
+            <a href="#contact">CONTACT</a>
+        </nav>
+    </header>
 
-## 🌟 Key Features
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Circular Logo Wrapper -->
+        <div class="logo-container">
+            <div class="logo-placeholder">
+                <i class="fa-solid fa-book-quran"></i>
+            </div>
+        </div>
 
-* **Premium Visual Aesthetic:** High-contrast Navy Blue background paired with glowing Gold elements and neon accents.
-* **Responsive Design:** Optimized for mobile, tablet, and desktop screens.
-* **Urdu Support:** Built-in RTL (Right-to-Left) formatting for natural reading of Urdu course descriptions.
-* **Quick Navigation:** Mobile-friendly header menu with fast scrolling to sections.
-* **Direct Call-to-Actions (CTAs):** Floating buttons for instant WhatsApp and Email contact.
+        <h1 class="academy-title">DARUL ILM ACADEMY</h1>
+        <h2 class="academy-subtitle">دارالعلوم اسلامک اکیڈمی</h2>
+        
+        <p class="hero-tagline">مستقبل کے معماروں کی دینی و اخلاقی تربیت</p>
 
----
+        <!-- CTA Buttons -->
+        <div class="cta-buttons">
+            <a href="https://wa.me/923156821561" target="_blank" class="btn btn-apply">
+                <i class="fa-brands fa-whatsapp"></i> ابھی رابطہ کریں (Apply Now)
+            </a>
+            <a href="tel:03156821561" class="btn btn-call">
+                <i class="fa-solid fa-phone"></i> کال کریں (Call Now)
+            </a>
+        </div>
+    </section>
 
-## 🛠️ Tech Stack
+    <!-- Admission Section -->
+    <section class="admission-highlight">
+        <div class="admission-box">
+            <h2>ADMISSION OPEN NOW</h2>
+            <h3>ابھی داخلہ لیں!</h3>
+        </div>
+        <div class="sub-admission-badge">
+            آن لائن کلاسز کی سہولت دستیاب ہے
+        </div>
+    </section>
 
-* **HTML5:** Semantic structure and RTL support.
-* **CSS3:** Custom properties (variables), Flexbox, CSS Grid, animations, and glow filter effects.
-* **FontAwesome:** For intuitive academic, social, and contact icons.
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <h2 class="section-title">ABOUT DARUL ILM ACADEMY</h2>
+        <div class="about-card">
+            <p>
+                دارالعلوم اسلامک اکیڈمی کا بنیادی مقصد طالبات کو بہترین دینی اور تعلیمی ماحول فراہم کرنا ہے۔ ہم روایتی اسلامی اقدار اور جدید تدریسی طریقوں کا ایک خوبصورت امتزاج پیش کرتے ہیں تاکہ ہماری طالبات علمِ دین کے زیور سے آراستہ ہو کر معاشرے کی فلاح و بہبود میں اپنا مثبت کردار ادا کر سکیں۔
+            </p>
+        </div>
+    </section>
 
----
+    <!-- Courses Section -->
+    <section id="courses" class="courses-section">
+        <h2 class="section-title">ہمارے کورسز (Our Courses)</h2>
+        
+        <!-- Regular Courses Grid -->
+        <h3 class="course-group-title">مکمل اور باقاعدہ کورسز</h3>
+        <div class="courses-grid">
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-book-open"></i></div>
+                <h3>تفسیر تعلیم قرآن کورس</h3>
+                <span class="duration">دورانیہ: 1 سالہ کورس</span>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-star-and-crescent"></i></div>
+                <h3>تفسیر صراط الجنان کورس</h3>
+                <span class="duration">دورانیہ: 1 سالہ کورس</span>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-microphone"></i></div>
+                <h3>تجوید کورس</h3>
+                <span class="duration">اہلیت: طالبہ کی قابلیت پر</span>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                <h3>ناظرہ قرآن مجید کورس</h3>
+                <span class="duration">اہلیت: طالبہ کی قابلیت پر</span>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-pen-clip"></i></div>
+                <h3>حدر ٹیسٹ کی تیاری</h3>
+                <span class="duration">اہلیت: طالبہ کی قابلیت پر</span>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                <h3>درس نظامی ٹیوشن کلاس</h3>
+                <span class="duration">طالبات کے لیے مخصوص</span>
+            </div>
+            <div class="course-card">
+                <div class="course-icon"><i class="fa-solid fa-scroll"></i></div>
+                <h3>نحو و صرف ٹیوشن کلاس</h3>
+                <span class="duration">بنیادی قواعد و ضوابط</span>
+            </div>
+        </div>
 
-## 📁 Project Structure
+        <!-- Short Courses Grid -->
+        <h3 class="course-group-title short-title">مختصر دورانیے اور خصوصی کورسز</h3>
+        <div class="courses-grid">
+            <div class="course-card special">
+                <div class="course-icon"><i class="fa-solid fa-person-dress"></i></div>
+                <h3>مسائل النساء کورس</h3>
+                <span class="duration">دورانیہ: 1 ماہ کا کورس</span>
+            </div>
+            <div class="course-card special">
+                <div class="course-icon"><i class="fa-solid fa-heart"></i></div>
+                <h3>شمائل مصطفیٰ ﷺ کورس</h3>
+                <span class="duration">دورانیہ: 1 ماہ کا کورس</span>
+            </div>
+            <div class="course-card special">
+                <div class="course-icon"><i class="fa-solid fa-child"></i></div>
+                <h3>مدنی قاعدہ کورس</h3>
+                <span class="duration">دورانیہ: 1 ماہ کا کورس</span>
+            </div>
+            <div class="course-card special">
+                <div class="course-icon"><i class="fa-solid fa-gem"></i></div>
+                <h3>احکام زینت کورس</h3>
+                <span class="duration">دورانیہ: 3 ماہ کا کورس</span>
+            </div>
+            <div class="course-card special">
+                <div class="course-icon"><i class="fa-solid fa-clock-history"></i></div>
+                <h3>واقعات قرآن کورس</h3>
+                <span class="duration">اہلیت: حفظِ قرآن پر منحصر</span>
+            </div>
+            <div class="course-card special">
+                <div class="course-icon"><i class="fa-solid fa-award"></i></div>
+                <h3>تخصص کی ٹیوشن کلاس</h3>
+                <span class="duration">ایڈوانس لیول کورسز</span>
+            </div>
+        </div>
+    </section>
 
-```text
-darul-ilm-academy/
-│
-├── index.html          # Main homepage containing structure and Urdu content
-├── style.css           # Styling, gradients, glows, and responsive layout
-└── README.md           # Project documentation and setup guide
+    <!-- Contact & Footer Section -->
+    <footer id="contact" class="main-footer" dir="ltr">
+        <h2 class="section-title">CONTACT US</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp icon-wa"></i>
+                <a href="https://wa.me/923156821561" target="_blank">03156821561</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-globe icon-web"></i>
+                <a href="https://darulilm-islamic-acadmey.base44.app" target="_blank">darulilm-islamic-acadmey.base44.app</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope icon-mail"></i>
+                <a href="mailto:darul.ilmacademyy@gmail.com">darul.ilmacademyy@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-credit">
+            <p>&copy; 2026 Darul Ilm Academy. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
