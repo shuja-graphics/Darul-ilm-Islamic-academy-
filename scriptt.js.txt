@@ -1,0 +1,152 @@
+document.addEventListener('DOMContentLoaded', () => {
+
+
+    /* ==========================================================================
+       1. SMOOTH SCROLLING FOR ALL INTERNAL LINKS
+       ========================================================================== */
+    const links = document.querySelectorAll('a[href^="#"]');
+    
+    links.forEach(link => {
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href');
+            if (targetId && targetId !== '#') {
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+        });
+    });
+
+
+    /* ==========================================================================
+       2. SCROLL REVEAL / FADE-IN ANIMATION FOR COURSE CARDS
+       ========================================================================== */
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+
+
+    const revealOnScroll = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
+                observer.unobserve(entry.target); // Animate once
+            }
+        });
+    }, observerOptions);
+
+
+    // Prepare course cards for entry animation
+    const cards = document.querySelectorAll('.course-card');
+    cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = `all 0.5s ease ${index * 0.05}s`;
+        revealOnScroll.observe(card);
+    });
+
+
+    /* ==========================================================================
+       3. COPY CONTACT INFO TO CLIPBOARD ON CLICK
+       ========================================================================== */
+    const contactItems = document.querySelectorAll('.contact-item');
+
+
+    contactItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            // Optional: If you want clicking phone/email to copy text instead of directly navigating
+            const textToCopy = item.querySelector('span').innerText.trim();
+
+
+            // Showing a subtle feedback visual (tooltip effect)
+            const originalText = item.querySelector('span').innerText;
+            
+            navigator.clipboard.writeText(textToCopy).then(() => {
+                const span = item.querySelector('span');
+                span.innerText = 'کپی ہو گیا! (Copied)';
+                span.style.color = '#d4af37';
+
+
+                setTimeout(() => {
+                    span.innerText = originalText;
+                    span.style.color = '';
+                }, 1800);
+            }).catch(err => {
+                console.log('Clipboard copy failed: ', err);
+            });
+        });
+    });
+
+
+    /* ==========================================================================
+       4. BACK TO TOP BUTTON (DYNAMIC CREATION)
+       ========================================================================== */
+    const backToTopBtn = document.createElement('button');
+    backToTopBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
+    backToTopBtn.id = 'backToTop';
+    
+    // Inline styling for quick deployment
+    Object.assign(backToTopBtn.style, {
+        position: 'fixed',
+        bottom: '25px',
+        left: '25px',
+        width: '45px',
+        height: '45px',
+        borderRadius: '50%',
+        backgroundColor: '#0d1b3e',
+        color: '#d4af37',
+        border: '2px solid #d4af37',
+        boxShadow: '0 4px 10px rgba(0, 0, 0, 0.3)',
+        cursor: 'pointer',
+        display: 'none',
+        alignItems: 'center',
+        justifyContent: 'center',
+        fontSize: '1.2rem',
+        zIndex: '1000',
+        transition: 'all 0.3s ease'
+    });
+
+
+    document.body.appendChild(backToTopBtn);
+
+
+    // Show/Hide back to top button based on scroll position
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            backToTopBtn.style.display = 'flex';
+        } else {
+            backToTopBtn.style.display = 'none';
+        }
+    });
+
+
+    backToTopBtn.addEventListener('click', () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+
+
+    backToTopBtn.addEventListener('mouseenter', () => {
+        backToTopBtn.style.backgroundColor = '#d4af37';
+        backToTopBtn.style.color = '#0d1b3e';
+    });
+
+
+    backToTopBtn.addEventListener('mouseleave', () => {
+        backToTopBtn.style.backgroundColor = '#0d1b3e';
+        backToTopBtn.style.color = '#d4af37';
+    });
+
+
+});
+
