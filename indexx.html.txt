@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ur" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دار العلوم اسلامک اکیڈمی - Darul Ilm Islamic Academy</title>
+    <!-- Urdu Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-navy: #0d1b3e;
+            --accent-gold: #d4af37;
+            --bg-light: #f8f9fa;
+            --text-dark: #1a1a1a;
+            --card-bg: #ffffff;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        body {
+            font-family: 'Noto Nastaliq Urdu', 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 2.2;
+        }
+
+
+        /* Header / Hero Section */
+        header {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: center;
+            padding: 50px 20px 30px;
+            border-bottom: 5px solid var(--accent-gold);
+            position: relative;
+        }
+
+
+        .logo-placeholder {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 3px solid var(--accent-gold);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #000;
+            color: var(--accent-gold);
+            font-size: 3rem;
+        }
+
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+        }
+
+
+        header p.subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+
+        /* Container */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+
+        /* Section Styling */
+        .section-title {
+            text-align: center;
+            color: var(--primary-navy);
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-gold);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+
+        /* Course Grid */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+
+        .course-card {
+            background-color: var(--card-bg);
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid var(--primary-navy);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+
+        .course-card:hover {
+            transform: translateY(-5px);
+            border-top-color: var(--accent-gold);
+        }
+
+
+        .course-card h3 {
+            color: var(--primary-navy);
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+
+        .course-card h3 i {
+            color: var(--accent-gold);
+        }
+
+
+        .course-badge {
+            display: inline-block;
+            background-color: #eef2ff;
+            color: var(--primary-navy);
+            padding: 2px 12px;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            margin-top: 5px;
+        }
+
+
+        /* Banner Tagline */
+        .quote-banner {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-radius: 10px;
+            margin-bottom: 40px;
+            border-right: 6px solid var(--accent-gold);
+        }
+
+
+        .quote-banner p {
+            font-size: 1.4rem;
+            color: var(--accent-gold);
+        }
+
+
+        /* Call to Action & Contact Section */
+        .contact-section {
+            background-color: var(--card-bg);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--primary-navy);
+            font-weight: bold;
+            font-size: 1.4rem;
+            padding: 12px 35px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.4);
+            transition: background 0.3s ease;
+        }
+
+
+        .cta-btn:hover {
+            background-color: #b89528;
+            color: #fff;
+        }
+
+
+        .contact-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 25px;
+            margin-top: 20px;
+            direction: ltr; /* Keeps formatting neat for numbers/emails */
+        }
+
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            color: var(--text-dark);
+            background: var(--bg-light);
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+        }
+
+
+        .contact-item i {
+            color: var(--primary-navy);
+            font-size: 1.3rem;
+        }
+
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-navy);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+
+    <!-- Header / Branding Section -->
+    <header>
+        <div class="logo-placeholder">
+            <i class="fa-solid fa-book-quran"></i>
+        </div>
+        <h1>دار العلوم اسلامک اکیڈمی</h1>
+        <p class="subtitle">Darul Ilm Islamic Academy</p>
+    </header>
+
+
+    <div class="container">
+
+
+        <!-- Regular Courses Section -->
+        <h2 class="section-title">مندرجہ ذیل کورسز کروائے جاتے ہیں</h2>
+        
+        <div class="courses-grid">
+            <div class="course-card">
+                <h3><i class="fa-solid fa-book"></i> تفسیر تعلیم قرآن کورس</h3>
+                <span class="course-badge">دورانیہ: 1 سالہ کورس</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-book-open"></i> تفسیر صراط الجنان کورس</h3>
+                <span class="course-badge">دورانیہ: ایک سال کا کورس</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-chalkboard-user"></i> تجوید کورس</h3>
+                <span class="course-badge">اہلیت: طالبہ کی قابلیت پر</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-quran"></i> ناظرہ قرآن مجید کورس</h3>
+                <span class="course-badge">اہلیت: طالبہ کی قابلیت پر</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-pen-to-square"></i> حدَر ٹیسٹ کی تیاری</h3>
+                <span class="course-badge">اہلیت: طالبہ کی قابلیت پر</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-graduation-cap"></i> درسِ نظامی ٹیوشن کلاس</h3>
+                <span class="course-badge">آن لائن / بالمشافہ</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-language"></i> نحو و صرف ٹیوشن کلاس</h3>
+                <span class="course-badge">آن لائن / بالمشافہ</span>
+            </div>
+        </div>
+
+
+        <!-- Short Courses Section -->
+        <h2 class="section-title">مختصر دورانیے اور خصوصی کورسز</h2>
+
+
+        <div class="courses-grid">
+            <div class="course-card">
+                <h3><i class="fa-solid fa-person-dress"></i> مسائل النساء کورس</h3>
+                <span class="course-badge">دورانیہ: ایک ماہ کا کورس</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-heart"></i> شمائل مصطفیٰ ﷺ کورس</h3>
+                <span class="course-badge">دورانیہ: ایک ماہ کا کورس</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-book-bookmark"></i> مدنی قائدہ کورس</h3>
+                <span class="course-badge">دورانیہ: ایک ماہ کا کورس</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-gem"></i> احکامِ زینت کورس</h3>
+                <span class="course-badge">دورانیہ: 3 ماہ کا کورس</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-clock"></i> واقعاتِ قرآن کورس</h3>
+                <span class="course-badge">اہلیت: طالبہ کے حفظ پر منحصر</span>
+            </div>
+
+
+            <div class="course-card">
+                <h3><i class="fa-solid fa-user-graduate"></i> تخصص کی ٹیوشن کلاس</h3>
+                <span class="course-badge">خصوصی رہنمائی</span>
+            </div>
+        </div>
+
+
+        <!-- Tagline Banner -->
+        <div class="quote-banner">
+            <p>!علمِ دین سیکھنے کی عمر نہیں ہوتی اور نہ ہی کوئی عذر۔ آج ہی اس مبارک سفر کا حصہ بنیں</p>
+        </div>
+
+
+        <!-- Contact / Admission Section -->
+        <div class="contact-section">
+            <a href="https://wa.me/923156821561" class="cta-btn" target="_blank">ابھی داخلہ لیں!</a>
+
+
+            <div class="contact-details">
+                <a href="tel:03156821561" class="contact-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>0315 6821561</span>
+                </a>
+
+
+                <a href="https://wa.me/923156821561" class="contact-item" target="_blank">
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <span>0315 6821561</span>
+                </a>
+
+
+                <a href="https://darulillm-islamic-acadmey.base44.app" class="contact-item" target="_blank">
+                    <i class="fa-solid fa-globe"></i>
+                    <span>darulillm-islamic-acadmey.base44.app</span>
+                </a>
+
+
+                <a href="mailto:darul.ilmacademyy@gmail.com" class="contact-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>darul.ilmacademyy@gmail.com</span>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Darul Ilm Islamic Academy. All Rights Reserved.</p>
+    </footer>
+
+
+</body>
+</html>
+
